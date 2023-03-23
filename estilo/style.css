@@ -1,0 +1,191 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');/*importacao da fonte no google fontes*/
+
+
+  
+
+
+@font-face {/*quando estou a usar uma fonte já baixada*/
+    font-family:'Android' ;
+    src: url(../pacote-projeto-d010/fontes/idroid.otf) format('opentype');/*metemos .. porque a font não está na mesma pasta que o css*/
+    font-weight: normal;/*tamanho da fonte*/
+}
+
+
+:root{/*uma outra forma de dar as cores é por criarmos variaveis dentro da pseudo classe root*/
+     --cor0:#c5ebd6;/*nome de variavel começa com --*/
+     --cor1:#83e1ad;/*essas variaveis funcionam como variaveis globais*/
+     --cor2:#3ddc84;
+     --cor3:#2fa866;
+     --cor4:#1a5c37;
+     --cor5:#063d1e;
+
+     --fonte-padrao:Arial,Verdana,Helvetica,sans-serif;
+     --fonte-destaque:'Bebas Neue', cursive;/*usando a fonte importada*/
+     --fonte-android:'Android',cursive;
+}
+
+body{
+    background-color: var(--cor0);
+    font-family: var(--fonte-padrao);
+    
+}
+header{
+    background-image:linear-gradient(to bottom,var(--cor3),var(--cor5));
+    min-height: 150px;
+    text-align: center;
+    padding-top: 20px;
+}
+header>h1{
+    color:white;
+    font-size: 3em;
+    font-family: var(--fonte-destaque);
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.63);
+    
+    
+}
+header>p{
+    font-family:var(--fonte-padrao) ;
+    font-size: 1.2em;
+    color: white;
+    max-width: 500px;
+    margin: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.445);
+    margin-bottom: 20px;
+}
+header>nav{
+    background-color: var(--cor5);
+    margin-top: 77px;
+    padding: 10px;
+    text-align: left;
+    box-shadow: 0px 7px 9px rgba(0, 0, 0, 0.363);
+}
+header>nav>a{
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+header>nav>a:hover{
+    background-color: var(--cor3);
+    color:var(--cor5);
+}
+main p{
+    margin: 15px 0px;
+    text-align: justify;
+    text-indent: 30px;/*Aquele recou zinho do parágrafo*/
+    line-height: 2em;/*distância entre cada linha*/
+    font-size: 1em;
+}
+main strong{
+    color: var(--cor4);
+    font-weight: bold;
+    color: var(--cor4);
+    
+}
+main a{
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--cor5);
+    background-color: var(--cor1);
+    padding: 2px 6px;
+}
+main a:hover{
+    text-decoration: underline;
+    color: var(--cor4);
+}
+main{
+    background-color: white;
+    max-width: 800px;
+    min-width: 320px;
+    margin: auto;
+    margin-bottom: 30px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px black;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+}
+main>article>h1{
+    color:var(--cor5);
+    font-family: var(--fonte-android);
+}
+main>article>h2{
+    font-family: var(--fonte-android);
+    color: var(--cor4);
+    font-size: 1.3em;
+    background-image: linear-gradient(to right,var(--cor1),transparent);
+    text-indent: 8px;
+}
+a.externo::after{
+    content: '\00A0\1F517';/*00A0 serve para dar um espaco entre o link e o simbolo*/
+}
+aside{
+    background-color: var(--cor1);
+    padding: 10px;
+    border-radius: 10px ;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.616);
+
+}
+aside h3{
+    background-color: var(--cor4);
+    color: white;
+    margin: -10px -10px 0px -10px;
+    padding: 10px;
+    border-radius: 10px 10px 0px 0px;
+}
+aside ul{
+    list-style-position: inside;
+    columns: 2;
+    
+}
+div.video{/*para tornar o video responsivo*/
+    background-color: #063d1e;
+    padding: 20px;
+    margin: 0px -20px 30px -20px;
+    padding-bottom: 45%;
+    position: relative;
+}
+div.video>iframe{/*para tornar o video responsivo*/
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+footer{
+    background-color: var(--cor5);
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 5px;
+}
+footer a{
+   color: white;
+   font-weight: bold;
+   text-decoration: none;
+}
+footer a:hover{
+    color: var(--cor1)
+}
+
+
+img{
+    width: 100%;
+}
+
+.pequena{
+    max-width: 350px;
+    
+    display: block;/*as imagens não são box level entaõ para o margin auto funcionar temos que meter o block*/
+    margin: auto;
+}
+*{/*esse asteristico quer dizer que esta configuracao a baixo se aplica a todos os nossos elementos*/
+    margin: 0px;
+    padding: 0px;
+}
